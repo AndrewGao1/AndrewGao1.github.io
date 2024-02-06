@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Code Style Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Visual Top Bar -->
+    <div id="visual-top-bar">
+        <div class="menu-item">File</div>
+        <div class="menu-item">Edit</div>
+        <div class="menu-item">Selection</div>
+        <div class="menu-item">View</div>
+        <div class="menu-item">Go</div>
+        <div class="menu-item">Run</div>
+        <div class="menu-item">Terminal</div>
+        <div class="menu-item">Help</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search" disabled />
+        </div>
+        <div class="window-controls">
+            <div class="window-control minimize"></div>
+            <div class="window-control maximize"></div>
+            <div class="window-control close"></div>
+        </div>
+
+    </div>
+
+    <div id="container">
+
+    <!-- Activity Bar mimicking VS Code's activity bar -->
+    <div id="activity-bar">
+        <div class="activity-icon" onclick="changeView('explorer')">🗂️</div>
+        <div class="activity-icon" onclick="changeView('search')">🔍</div>
+        <div class="activity-icon" onclick="changeView('git')">🔃</div>
+        <div class="activity-icon" onclick="changeView('debug')">🐞</div>
+        <div class="activity-icon" onclick="changeView('extensions')">🧩</div>
+    <!-- Add more icons as needed -->
+    </div>
+        <!-- Sidebar -->
+    <div id="sidebar">
+
+        <!-- Sidebar header -->
+        <div class="sidebar-header">
+            EXPLORER
+        </div>
+
+        <div id="explorer">
+            <div class="explorer-item">
+                <span class="explorer-icon">📁</span>
+                <span>WEBSITE</span>
+            </div>
+            <div class="explorer-item file">
+                <span class="explorer-icon">📄</span>
+                <a href="AndrewGaoResumeFinal.pdf" target="_blank">resume.pdf</a>
+            </div>
+            <div class="explorer-item file">
+                <span class="explorer-icon">📄</span>
+                <a href="cover_letter.pdf" target="_blank">cover_letter.pdf</a>
+            </div>
+        </div>
+    </div>
+
+        <!-- Main content area -->
+    <div id="content-area">
+        
+        <!-- Top bar for the path -->
+        <div id="top-bar">
+            <div class="tab" onclick="changeTabContent('about')"">About</div>
+            <div class="tab" onclick="changeTabContent('experience')">Experience</div>
+            <div class="tab" onclick="changeTabContent('projects')">Projects</div>
+            <div class="tab" onclick="changeTabContent('contact')">Contact</div>
+        </div>
+
+        <div id="file-path">
+            andrewjgao.html > html > body > <span id="dynamic-path">About</span>
+        </div>
+        <div id="line-content">
+            <!-- Content area that changes when different tabs are clicked -->
+            <div id="line-numbers" contenteditable="false" oninput="updateLineNumbers()"></div>
+            <div id="main-content" contenteditable="false" oninput="updateLineNumbers()">
+                <div style="height: 2000px;"></div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="bottom-bar">
+    <!-- Left corner with blue background -->
+    <div id="bottom-bar-status">
+        <span class="status-indicator">✔</span> <!-- Replace with an actual checkmark icon -->
+    </div>
+    
+    <!-- Main area of the bottom bar with error and warning icons -->
+    <div id="bottom-bar-main">
+        <span class="error-icon">⚠ 0</span> <!-- Replace with an actual error icon -->
+        <span class="warning-icon">✖ 0</span> <!-- Replace with an actual warning icon -->
+        <span class="spacer"></span> <!-- Spacer to push items to the right -->
+        <span>Ln 45, Col 20</span>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

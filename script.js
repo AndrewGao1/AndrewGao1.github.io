@@ -119,6 +119,21 @@ function changeTabContent(tabName) {
         <p class="string">"""</p>
         `;
         
+    } else if (tabName.toLowerCase() === 'contact') {
+        contentArea.innerHTML = `
+        <div id="contact-section" class="code-block">
+        <p class="comment"># Contact</p>
+    
+        <p><span class="keyword">class</span> ConnectWithMe:</p>
+        <p class="string">"""</p>
+        <p class="attribute">self.email = <span class="string">'andrewgao227@gmail.com'</span></p>
+        <p class="attribute">self.phone = <span class="string">'(470) 350 9910'</span></p>
+        <p class="attribute">self.linkedin = <span class="project-link"><a href="https://www.linkedin.com/in/andrew-gao5/">Linkedin</a></span></p>
+        <p class="string">"""</p>
+        <p class="attribute">self.github = <span class="project-link"><a href="https://github.com/AndrewGao1">Github</a></span></p>
+        <p class="string">"""</p>
+        `;
+        
     }
 
 }

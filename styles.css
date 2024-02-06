@@ -534,3 +534,47 @@ body, html {
     text-decoration: underline; /* Adds an underline on hover, optional */
 }
 
+#contact-section {
+    line-height: 0.5;
+}
+
+.code-block p {
+    line-height: 1; /* Adjust this value as needed */
+    margin-bottom: 0.5em; /* Adds space below paragraphs */
+    font-size: 14px; /* Or whatever size fits your design */
+}
+
+.code-block {
+    font-size: 0.9em; /* Adjust the font size as needed */
+}
+
+/* Add specific styles for the class and comment to make them distinct */
+.keyword {
+    font-weight: bold; /* Makes keywords bold */
+}
+
+.comment {
+    font-style: italic; /* Italicize comments */
+}
+
+.code-block .method-def {
+    padding-left: 2em; /* Adjust as needed */
+}
+
+.code-block .attribute {
+    padding-left: 4em; /* Adjust as needed */
+}
+
+.code-block .date-comment {
+    padding-left: 2em; /* Adjust as needed */
+    color: #56b6c2; /* Color for comments */
+}
+
+.project-link a {
+    color: #007acc; /* Blue color for project links */
+    text-decoration: none; /* Removes the underline from links */
+}
+
+.project-link a:hover {
+    text-decoration: underline; /* Adds an underline on hover, optional */
+}

@@ -314,6 +314,7 @@ body, html {
 }
 .comment {
     color: #98c379; /* Green color for comments */
+    font-size: 18px;
 }
 
 .keyword {
@@ -389,6 +390,7 @@ body, html {
 
 #about-section .comment {
     color: #98c379; /* Green color for comments */
+    font-size: 18px;
 }
 
 #about-section .keyword {
@@ -450,6 +452,7 @@ body, html {
 
 .comment {
     font-style: italic; /* Italicize comments */
+    font-size: 18px;
 }
 
 #experience-section {
@@ -473,6 +476,7 @@ body, html {
 
 .comment {
     font-style: italic; /* Italicize comments */
+    font-size: 18px;
 }
 
 .code-block .method-def {
@@ -510,6 +514,7 @@ body, html {
 
 .comment {
     font-style: italic; /* Italicize comments */
+    font-size: 18px;
 }
 
 .code-block .method-def {
@@ -555,6 +560,7 @@ body, html {
 
 .comment {
     font-style: italic; /* Italicize comments */
+    font-size: 18px;
 }
 
 .code-block .method-def {

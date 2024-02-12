@@ -43,24 +43,19 @@ function changeTabContent(tabName) {
     if (tabName.toLowerCase() === 'about') {
         contentArea.innerHTML = `
         <div id="about-section" class="code-block">
-        <p class="comment"># About Me</p>
+        <p class="comment"># Hi, I'm Andrew Gao! - About Me</p>
         <p class="method-def"><span class="keyword">class</span> AboutAndrewGao:</p>
         <p class="attribute">self.intro = <span class="string">Welcome! I'm Andrew Gao, a 3rd Year B.S./M.S. Computer Science Student at the Georgia Institute of Technology!
         My undergraduate threads are Intelligence and Media, and my Masters specialization will be in Human-Computer Interaction.
         I have held previous internship positions in Cloud Automation and Software Engineering, where I developed a wide range
         of technical and professional skills. With an expected graduation date of Spring 2025 with my Masters, I am looking for my
-        final summer internship, with a specific interest toward Software Engineering or Artificial Intelligence positions.
+        final summer internship, with a specific interest toward Software Engineering or Artificial Intelligence positions. Take a look 
+        around - check out my resume on the left, and my experiences and contact along the top bar!
         </p>
+        <p class="attribute">self.portrait = <span class="string"><img src="andrewgao.jpg" alt="Andrew Gao" class="portrait"/></span></p>
         <p class="attribute">self.extracurriculars = <span class="string">'GT Barbell, GT AASA'</span></p>
         <p class="attribute">self.favorite_activities = <span class="string">'Powerlifting, Golf, Baseball'</span></p>
         <p class="attribute">self.hobbies = <span class="string">'Reading and Watching Fantasy Books and Movies'</span></p>
-        <p class="attribute">self.coursework = <span class="string">'Intro to Object Oriented Programming, Data Structures and Algorithms, 
-        Design and Analysis - Algorithms, Computer Organization and Programming, Intro to Artificial Intelligence, Intro to Robotics and 
-        Perception, Computer Graphics, Machine Learning, Computer Audio, Data Visualization, Automata and Complexity, Advanced 
-        Privacy Topics, Deep Learning'</span></p>
-        <p class="attribute">self.tech_skills = <span class="string">'Java, Python, C#, JavaScript, Git, Unity, Terraform, PowerShell, .NET, MudBlazor, Azure, REST API, gRPC API, NATS, Docker, PostgreSQL, Apache Spark, Apache Kafka, Apache Camel'</span></p>
-        <p class="attribute">self.soft_skills = <span class="string">'Communication, Leadership, Adaptability, Teamwork, Problem-Solving'</span></p>
-        <p class="attribute">self.portrait = <span class="string"><img src="andrewgao.jpg" alt="Andrew Gao" class="portrait"/></span></p>
         <p class="method-def">def thank_you(self):</p>
         <p class="attribute">return <span class="string">'Thank you for visiting my site and feel free to explore!'</span></p>
     </div>
@@ -89,6 +84,17 @@ function changeTabContent(tabName) {
         <p class="attribute">self.webpage_design = <span class="string">'Designed a webpage using MudBlazor and .NET C# allowing a user to check the health of any given website and perform tasks such as a DNS DIG, Uptime checks, and SSL certificate checks.'</span></p>
         <p class="attribute">self.agile_experience = <span class="string">'Acquired valuable workplace experience with Agile Development and SOLID principles.'</span></p>
         <p class="string">"""</p>
+
+        <p class="comment"># Skills</p>
+        <p><span class="keyword">class</span> Skills:</p>
+        <p class="string">"""</p>
+        <p class="attribute">self.coursework = <span class="string">'Intro to Object Oriented Programming, Data Structures and Algorithms, 
+        Design and Analysis - Algorithms, Computer Organization and Programming, Intro to Artificial Intelligence, Intro to Robotics and 
+        Perception, Computer Graphics, Machine Learning, Computer Audio, Data Visualization, Automata and Complexity, Advanced 
+        Privacy Topics, Deep Learning'</span></p>
+        <p class="attribute">self.tech_skills = <span class="string">'Java, Python, C#, JavaScript, Git, Unity, Terraform, PowerShell, .NET, MudBlazor, Azure, REST API, gRPC API, NATS, Docker, PostgreSQL, Apache Spark, Apache Kafka, Apache Camel'</span></p>
+        <p class="attribute">self.soft_skills = <span class="string">'Communication, Leadership, Adaptability, Teamwork, Problem-Solving'</span></p>
+        <p class="string">"""</p>
         </div>
         `;
     } else if (tabName.toLowerCase() === 'projects') {
@@ -99,23 +105,25 @@ function changeTabContent(tabName) {
         <p><span class="keyword">class</span> SmartStadium_MachineLearningTeam:</p>
         <p class="string">"""</p>
         <p class="date-comment"># Jan 2023 - Present</p>
-        <p class="attribute">self.team_lead = <span class="string"><img src="vip.png" alt="Andrew Gao" class="photo"/></span></p>
+        <p class="attribute">self.photo = <span class="string"><img src="vip.png" alt="Andrew Gao" class="photo"/></span></p>
+        <p class="attribute">self.description = <span class="string">'Team working to classify football plays using CNNs, Markov Chains, and Object Detection'</span></p>
         <p class="attribute">self.data_cleaning = <span class="string">'Organized a team-wide data cleaning effort on thousands of video clips.'</span></p>
         <p class="attribute">self.hyperparameters = <span class="string">'Performed hyper-parameterization on the convolutional neural network model.'</span></p>
         <p class="attribute">self.incorrect_clips = <span class="string">'Investigated hundreds of incorrectly classified video clips to identify possible patterns, resulting in discovery of a critical error with video and play matching.'</span></p>
         <p class="attribute">self.research_paper = <span class="string">'Co-authored and submitted research paper to the 2023 IEEE PIMRC and 2024 Sloan Sports Conference.'</span></p>
-        <p class="attribute">self.research_paper = <span class="project-link"><a href="https://gtvault.sharepoint.com/sites/VIP-VP3-Stadium-IoPT/Home/Machine%20Learning.aspx">Project Details</a></span></p>
+        <p class="attribute">self.research_paper_link = <span class="project-link"><a href="https://docs.google.com/document/d/11MoRnW-M3BZFmWPLjFk5BK1pmoupe82f/edit?usp=sharing&ouid=103939176623041162479&rtpof=true&sd=true">Team Research Paper</a></span></p>
         <p class="string">"""</p>
     
         <p><span class="keyword">class</span> Paravoid_VideoGameDesign_SoftwareTeamLead:</p>
         <p class="string">"""</p>
         <p class="date-comment"># Sep 2021 - Jan 2022</p>
         <p class="attribute">self.photo = <span class="string"><img src="paravoid.png" alt="Andrew Gao" class="photo"/></span></p>
+        <p class="attribute">self.description = <span class="string">'Led a software subteam with the goal of completing and publishing a full videogame in one semester'</span></p>
         <p class="attribute">self.team_lead = <span class="string">'Lead, organize, and plan all software team meetings. '</span></p>
         <p class="attribute">self.communicate = <span class="string">'Communicated goals and priorities set by the project lead to over 20 other programmers.'</span></p>
         <p class="attribute">self.tasks = <span class="string">'Assign tasks to all team members and promote teamwork.'</span></p>
         <p class="attribute">self.teach = <span class="string">'Assist inexperienced members in learning the Unity API, C#, and Git.'</span></p>
-        <p class="attribute">self.research_paper = <span class="project-link"><a href="https://www.gtvgdev.com/games-archive/paravoid">Project Details</a></span></p>
+        <p class="attribute">self.download_link = <span class="project-link"><a href="https://www.gtvgdev.com/games-archive/paravoid">Project Details</a></span></p>
         <p class="string">"""</p>
         `;
         

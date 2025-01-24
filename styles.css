@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Consolas', 'Monaco', monospace;
-    background-color: #1e1e1e; /* VS Code main background color */
+    background-color: #1e1e1e;
     color: white;
     overflow: hidden;
 }
@@ -14,8 +14,8 @@ body, html {
 }
 
 #activity-bar {
-    width: 50px; /* Width of the activity bar */
-    background-color: #252526; /* VS Code activity bar color */
+    width: 50px;
+    background-color: #252526;
     color: white;
     display: flex;
     flex-direction: column;
@@ -28,26 +28,25 @@ body, html {
 }
 
 .activity-icon {
-    font-size: 1.5em; /* Icon size in the activity bar */
+    font-size: 1.5em;
     margin: 10px 0;
     cursor: pointer;
 }
 
 .activity-icon:hover {
-    background-color: #444444; /* Hover color for icons */
+    background-color: #444444;
 }
 
 #sidebar {
-    width: 200px; /* Width of the sidebar */
-    background-color: #252526; /* VS Code sidebar color */
+    width: 200px;
+    background-color: #252526;
     color: #ccc;
-    font-size: 14px; /* Font size for the sidebar */
+    font-size: 14px;
     border-right: 1px solid #3c3c3c;
     overflow: hidden;
     flex-shrink: 0;
 }
 
-/* Style for the sidebar header */
 .sidebar-header {
     color: #cccccc;
     background-color: #252526;
@@ -59,58 +58,58 @@ body, html {
 
 .explorer-item {
     padding-left: 10px;
-    line-height: 22px; /* Line height for explorer items */
-    border-left: 3px solid transparent; /* Border for active explorer item */
+    line-height: 22px;
+    border-left: 3px solid transparent;
 }
 
 .explorer-item:hover {
-    background-color: #383838; /* Hover color for explorer items */
+    background-color: #383838;
 }
 
 .explorer-item.file {
-    padding-left: 25px; /* Additional padding for file items */
+    padding-left: 25px;
 }
 
 .explorer-icon {
-    margin-right: 5px; /* Spacing between icon and text */
+    margin-right: 5px;
 }
 
 .explorer-item.active {
-    border-left: 3px solid #007acc; /* Highlight color for selected item */
-    background-color: #333333; /* Background color for selected item */
+    border-left: 3px solid #007acc;
+    background-color: #333333;
     color: white;
 }
 
 .explorer-item.file a {
-    color: #ccc; /* This should be the color of your other explorer text */
-    text-decoration: none; /* Removes the underline from links */
+    color: #ccc;
+    text-decoration: none;
 }
 
 .explorer-item.file a:hover {
-    color: #ffffff; /* Color when hovering over the link, adjust as needed */
-    text-decoration: underline; /* Adds an underline on hover, optional */
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 #content-area {
     flex-grow: 1;
-    display: flex;;
-    flex-direction: column; /* Stack top-bar and main-content vertically */ 
+    display: flex;
+    flex-direction: column;
 }
 
 #line-content {
     flex-grow: 1;
-    display: flex;;
-    flex-direction: horizontal; /* Stack top-bar and main-content vertically */
+    display: flex;
+    flex-direction: horizontal;
     overflow: hidden;
 }
 
 #line-numbers {
-    width: 30px; /* Width for line numbers, adjust as needed */
-    background-color: #1e1e1e; /* Dark background color for line numbers */
-    color: #858585; /* Color for line numbers */
-    text-align: right; /* Right-align the line numbers */
-    user-select: none; /* Prevent the line numbers from being selected */
-    white-space: nowrap; /* Prevent line numbers from wrapping */
+    width: 30px;
+    background-color: #1e1e1e;
+    color: #858585;
+    text-align: right;
+    user-select: none;
+    white-space: nowrap;
     margin-right: 10px;
     margin-left: 10px;
     line-height: 1;
@@ -118,112 +117,109 @@ body, html {
 }
 
 #main-content {
-    flex-grow: 1; /* Allow the content area to fill the remaining space */
+    flex-grow: 1;
     word-wrap: break-word;
-    background-color: #1e1e1e; /* Lighter background color for the content area */
-    color: #cccccc; /* Color for the text */
-    padding: 10px; /* Padding inside the content area */
-    white-space: pre-wrap; /* Preserve line breaks and spaces */
-    line-height: 1; /* Match line height with line numbers */
+    background-color: #1e1e1e;
+    color: #cccccc;
+    padding: 10px;
+    white-space: pre-wrap;
+    line-height: 1;
     margin-left: 10px;
     overflow-y: auto;
 }
 
 #top-bar {
-    background-color: #252526; /* Dark background color matching the explorer */
+    background-color: #252526;
     display: flex;
     justify-content: start;
-    padding: 5px 0; /* Top and bottom padding */
+    padding: 5px 0;
     border-bottom: 1px solid #3c3c3c;
     overflow: hidden;
     flex-shrink: 0;
 }
 
 .tab {
-    background-color: #252526; /* Dark background color for inactive tabs */
-    color: #cccccc; /* Light text color for tabs */
-    padding: 5px 10px; /* Padding inside tabs */
-    margin-right: 2px; /* Space between tabs */
+    background-color: #252526;
+    color: #cccccc;
+    padding: 5px 10px;
+    margin-right: 2px;
     cursor: pointer;
     display: flex;
-    align-items: center; /* Vertically center the text within the tabs */
-    height: 100%; /* Make the tabs fill the top bar's height */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    border: 1px solid transparent; /* Transparent border for a cleaner look */
-    transition: background-color 0.3s; /* Smooth transition for background color */
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    transition: background-color 0.3s;
 }
 
 .tab:hover {
-    background-color: #333333; /* Slightly lighter background color on hover */
+    background-color: #333333;
 }
 
 .tab.active {
-    background-color: #2c2c2c; /* Light gray background color for active tab */
-    color: #cccccc; /* Dark text color for active tab */
-    border-top: 2px solid #007acc; /* Highlight border for active tab */
-    border-bottom: 1px solid #2c2c2c; /* Border color to match active tab background */
+    background-color: #2c2c2c;
+    color: #cccccc;
+    border-top: 2px solid #007acc;
+    border-bottom: 1px solid #2c2c2c;
 }
 
-
 #file-path {
-    color: #9CDCFE; /* Light blue color for file path */
-    background-color: #252526; /* Dark background color to match the sidebar */
-    padding: 5px 10px; /* Top and bottom padding with horizontal padding */
-    font-family: 'Consolas', 'Monaco', monospace; /* Font to match VS Code style */
-    border-bottom: 1px solid #333333; /* Separator from the content area */
-    font-size: 0.85em; /* Smaller font size for the file path */
-    white-space: nowrap; /* Prevent the file path from wrapping */
-    overflow: hidden; /* Hide overflow */
-    text-overflow: ellipsis; /* Add an ellipsis if the path is too long */
+    color: #9CDCFE;
+    background-color: #252526;
+    padding: 5px 10px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    border-bottom: 1px solid #333333;
+    font-size: 0.85em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     flex-shrink: 0;
-    
 }
 
 #bottom-bar {
-    background-color: #1e1e1e; /* Black background color for the main part of the status bar */
-    color: white; /* Text color */
-    display: flex; /* Use flexbox for positioning the content */
-    position: fixed; /* Fixed at the bottom */
-    bottom: 0; /* Stick to the bottom */
-    left: 0; /* Stretch from the left edge */
-    right: 0; /* Stretch to the right edge */
-    z-index: 1000; /* Ensure it's above other content */
-    align-items: center; /* Vertically align the content */
-    font-size: 0.85em; /* Match the font size from the image */
+    background-color: #1e1e1e;
+    color: white;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    align-items: center;
+    font-size: 0.85em;
     border-top: 1px solid #3c3c3c;
     overflow: hidden;
 }
 
 #bottom-bar-status {
-    background-color: #007acc; /* Blue background color for the status section */
-    padding: 5px 10px; /* Padding inside the status section */
+    background-color: #007acc;
+    padding: 5px 10px;
     display: flex;
-    align-items: center; /* Vertically align the content */
+    align-items: center;
 }
 
 #bottom-bar-main {
-    flex-grow: 1; /* Take up the rest of the space */
+    flex-grow: 1;
     display: flex;
-    align-items: center; /* Vertically align the content */
-    padding: 5px 10px; /* Padding inside the main bar */
+    align-items: center;
+    padding: 5px 10px;
 }
 
 .status-indicator, .error-icon, .warning-icon {
-    margin-right: 10px; /* Space between icons and text */
-    /* Style these icons as needed */
+    margin-right: 10px;
 }
 
 .spacer {
-    flex-grow: 1; /* Push items to the right */
+    flex-grow: 1;
 }
 
 #visual-top-bar {
-    background-color: #252526; /* Match the color to the explorer */
-    color: #ffffff; /* Text color */
+    background-color: #252526;
+    color: #ffffff;
     display: flex;
-    justify-content: space-between; /* Space out the sections */
+    justify-content: space-between;
     align-items: center;
-    padding: 5px 10px; /* Padding inside the top bar */
+    padding: 5px 10px;
     border-bottom: 1px solid #3c3c3c;
     overflow: hidden;
 }
@@ -233,49 +229,47 @@ body, html {
 }
 
 .menu-item {
-    margin-right: 15px; /* Space between menu items */
-    cursor: default; /* Default cursor to indicate non-functionality */
+    margin-right: 15px;
+    cursor: default;
 }
 
 .search-bar {
-    flex-grow: 2; /* Allow the search bar to grow */
+    flex-grow: 2;
     display: flex;
-    justify-content: center; /* Center the search bar */
+    justify-content: center;
 }
 
 .search-bar input {
-    width: 60%; /* Make the search bar wider */
-    background-color: #333333; /* Background color of the search input, slightly lighter than the bar */
-    color: #ddd; /* Text color of the search input */
-    border: 1px solid #444; /* Slightly visible border */
-    padding: 2px 5px; /* Padding inside the search input */
-    /* Disable the search bar */
+    width: 60%;
+    background-color: #333333;
+    color: #ddd;
+    border: 1px solid #444;
+    padding: 2px 5px;
     cursor: not-allowed;
 }
 
 .window-controls {
     display: flex;
-    align-items: center; /* Align the control buttons vertically */
+    align-items: center;
 }
 
 .window-control {
-    width: 15px; /* Width of the control buttons */
-    height: 15px; /* Height of the control buttons */
-    border-radius: 50%; /* Make them circular */
-    margin-left: 5px; /* Space between control buttons */
-    background-color: #252526; /* Match the color to the explorer */
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 5px;
+    background-color: #252526;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: default; /* Default cursor to indicate non-functionality */
+    cursor: default;
 }
 
-/* Visual indicator for the window control buttons */
 .window-control.minimize::before {
     content: '';
     width: 60%;
     height: 2px;
-    background-color: #ffbd44; /* Minimize color */
+    background-color: #ffbd44;
     border-radius: 1px;
 }
 
@@ -283,7 +277,7 @@ body, html {
     content: '';
     width: 60%;
     height: 2px;
-    background-color: #00ca56; /* Maximize color */
+    background-color: #00ca56;
     border-radius: 1px;
 }
 
@@ -291,296 +285,146 @@ body, html {
     content: '';
     width: 60%;
     height: 2px;
-    background-color: #ff5f57; /* Close color */
+    background-color: #ff5f57;
     border-radius: 1px;
 }
 
 @media screen and (max-width: 768px) {
-.code-block {
-    background-color: #282c34; /* Dark background typical for a code editor */
-    color: #abb2bf; /* Light gray color for the text */
-    font-family: 'Consolas', 'Monaco', monospace;
-    padding: 20px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    overflow-x: auto; /* In case the content overflows horizontally */
-    line-height: 1; /* More readable line height */
-    white-space: pre-wrap; /* Preserves spacing and formatting */
-    overflow-wrap: break-word;
-    word-break: break-word;
-    overflow-x: auto;
+    .code-block {
+        background-color: #282c34;
+        color: #abb2bf;
+        font-family: 'Consolas', 'Monaco', monospace;
+        padding: 20px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        overflow-x: auto;
+        line-height: 1;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        overflow-x: auto;
+    }
+}
 
-}
-}
 .comment {
-    color: #98c379; /* Green color for comments */
+    color: #98c379;
     font-size: 18px;
 }
 
 .keyword {
-    color: #c678dd; /* Purple color for keywords like 'class', 'def', etc. */
+    color: #c678dd;
 }
 
 .string {
-    color: #e5c07b; /* Orange color for strings */
+    color: #e5c07b;
 }
 
-
 .about-photo img {
-    /* Adjust the width or height as needed, add a border-radius, etc. */
-    width: 100px; /* Adjust as needed */
+    width: 100px;
     border-radius: 4px;
-    margin-left: 20px; /* To give some space from the text */
+    margin-left: 20px;
 }
 
 .string .portrait {
-    width: 150px; /* Reduced width */
-    border-radius: 4px; /* Rounded corners for the image */
-    margin-left: 10px; /* Gap between the equals sign and the photo */
-    vertical-align: top; /* Align the top of the image with the text */
+    width: 150px;
+    border-radius: 4px;
+    margin-left: 10px;
+    vertical-align: top;
 }
 
 .string .photo {
-    width: 350px; /* Reduced width */
-    border-radius: 4px; /* Rounded corners for the image */
-    margin-left: 10px; /* Gap between the equals sign and the photo */
-    vertical-align: top; /* Align the top of the image with the text */
+    width: 350px;
+    border-radius: 4px;
+    margin-left: 10px;
+    vertical-align: top;
 }
 
-/* Additional styling to ensure the layout is as expected */
 .about-content {
     display: flex;
-    align-items: flex-start; /* Align the top of the items */
-    gap: 20px; /* Space between text and image */
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .about-text {
-    flex-grow: 1; /* Allow text to fill the available space */
+    flex-grow: 1;
 }
 
-/* Media queries for responsiveness */
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
     }
 
     .about-photo img {
-        width: 100%; /* Full width on smaller screens */
-        height: auto; /* Maintain aspect ratio */
-        margin-left: 0; /* Reset left margin */
-        margin-top: 20px; /* Space between text and image on smaller screens */
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-top: 20px;
     }
 }
 
-/* Your specific updates for the About section */
-#about-section .code-block {
-    background-color: #282c34; /* Dark background typical for a code editor */
-    color: #abb2bf; /* Light gray color for the text */
-    font-family: 'Consolas', 'Monaco', monospace;
-    padding: 20px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    overflow-x: auto; /* In case the content overflows horizontally */
-    line-height: 1; /* More readable line height */
-    white-space: pre-wrap; /* Preserves spacing and formatting */
-    overflow-wrap: break-word;
-    word-break: break-word;
-    overflow-x: auto;
+#terminal-menu {
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#about-section .comment {
-    color: #98c379; /* Green color for comments */
-    font-size: 18px;
+#terminal-menu:hover {
+    background-color: #333333;
+    color: #ffffff;
 }
 
-#about-section .keyword {
-    color: #c678dd; /* Purple color for keywords like 'class', 'def', etc. */
+#terminal-menu.active {
+    background-color: #2c2c2c;
+    color: #cccccc;
+    border-bottom: 2px solid #007acc;
 }
 
-#about-section .string {
-    color: #e5c07b; /* Orange color for strings */
+#terminal-window {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 300px;
+    background-color: #1e1e1e;
+    color: #9cdcfe;
+    font-family: 'Consolas', monospace;
+    border-top: 1px solid #3c3c3c;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
 }
 
-#about-section .attribute {
-    padding-left: 4em; /* Adjust as needed for the indentation */
-    line-height: 1.4; /* Adjust this value as needed */
-    margin-bottom: 0.5em; /* Adds space below paragraphs */
-    font-size: 14px; /* Or whatever size fits your design */
+#terminal-header {
+    background-color: #252526;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #3c3c3c;
+    color: #ffffff;
 }
 
-#about-section .method-def {
-    padding-left: 2em; /* Adjust as needed for the indentation */
-    line-height: 1.4; /* Adjust this value as needed */
-    margin-bottom: 0.5em; /* Adds space below paragraphs */
-    font-size: 14px; /* Or whatever size fits your design */
+#terminal-body {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    outline: none;
 }
 
-#about-section .about-photo img {
-    /* Adjust the width or height as needed, add a border-radius, etc. */
-    width: 100px; /* Adjust as needed */
-    border-radius: 4px;
-    margin-left: 20px; /* To give some space from the text */
+#close-terminal {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-@media (max-width: 768px) {
-    #about-section .about-content {
-        flex-direction: column;
-    }
-
-    #about-section .about-photo img {
-        width: 100%; /* Full width on smaller screens */
-        height: auto; /* Maintain aspect ratio */
-        margin-left: 0; /* Reset left margin */
-        margin-top: 20px; /* Space between text and image on smaller screens */
-    }
+#close-terminal:hover {
+    color: #ff5f57;
 }
 
-.code-block p {
-    line-height: 1.4; /* Adjust this value as needed */
-    margin-bottom: 0.5em; /* Adds space below paragraphs */
-    font-size: 14px; /* Or whatever size fits your design */
-}
-
-.code-block {
-    font-size: 0.9em; /* Adjust the font size as needed */
-}
-
-/* Add specific styles for the class and comment to make them distinct */
-.keyword {
-    font-weight: bold; /* Makes keywords bold */
-}
-
-.comment {
-    font-style: italic; /* Italicize comments */
-    font-size: 18px;
-}
-
-#experience-section {
-    line-height: 0.5;
-}
-
-.code-block p {
-    line-height: 1; /* Adjust this value as needed */
-    margin-bottom: 0.5em; /* Adds space below paragraphs */
-    font-size: 14px; /* Or whatever size fits your design */
-}
-
-.code-block {
-    font-size: 0.9em; /* Adjust the font size as needed */
-}
-
-/* Add specific styles for the class and comment to make them distinct */
-.keyword {
-    font-weight: bold; /* Makes keywords bold */
-}
-
-.comment {
-    font-style: italic; /* Italicize comments */
-    font-size: 18px;
-}
-
-.code-block .method-def {
-    padding-left: 2em; /* Adjust as needed */
-}
-
-.code-block .attribute {
-    padding-left: 4em; /* Adjust as needed */
-}
-
-.code-block .date-comment {
-    padding-left: 2em; /* Adjust as needed */
-    color: #56b6c2; /* Color for comments */
-}
-
-
-#project-section {
-    line-height: 0.5;
-}
-
-.code-block p {
-    line-height: 1; /* Adjust this value as needed */
-    margin-bottom: 0.5em; /* Adds space below paragraphs */
-    font-size: 14px; /* Or whatever size fits your design */
-}
-
-.code-block {
-    font-size: 0.9em; /* Adjust the font size as needed */
-}
-
-/* Add specific styles for the class and comment to make them distinct */
-.keyword {
-    font-weight: bold; /* Makes keywords bold */
-}
-
-.comment {
-    font-style: italic; /* Italicize comments */
-    font-size: 18px;
-}
-
-.code-block .method-def {
-    padding-left: 2em; /* Adjust as needed */
-}
-
-.code-block .attribute {
-    padding-left: 4em; /* Adjust as needed */
-}
-
-.code-block .date-comment {
-    padding-left: 2em; /* Adjust as needed */
-    color: #56b6c2; /* Color for comments */
-}
-
-.project-link a {
-    color: #007acc; /* Blue color for project links */
-    text-decoration: none; /* Removes the underline from links */
-}
-
-.project-link a:hover {
-    text-decoration: underline; /* Adds an underline on hover, optional */
-}
-
-#contact-section {
-    line-height: 0.5;
-}
-
-.code-block p {
-    line-height: 1; /* Adjust this value as needed */
-    margin-bottom: 0.5em; /* Adds space below paragraphs */
-    font-size: 14px; /* Or whatever size fits your design */
-}
-
-.code-block {
-    font-size: 0.9em; /* Adjust the font size as needed */
-}
-
-/* Add specific styles for the class and comment to make them distinct */
-.keyword {
-    font-weight: bold; /* Makes keywords bold */
-}
-
-.comment {
-    font-style: italic; /* Italicize comments */
-    font-size: 18px;
-}
-
-.code-block .method-def {
-    padding-left: 2em; /* Adjust as needed */
-}
-
-.code-block .attribute {
-    padding-left: 4em; /* Adjust as needed */
-}
-
-.code-block .date-comment {
-    padding-left: 2em; /* Adjust as needed */
-    color: #56b6c2; /* Color for comments */
-}
-
-.project-link a {
-    color: #007acc; /* Blue color for project links */
-    text-decoration: none; /* Removes the underline from links */
-}
-
-.project-link a:hover {
-    text-decoration: underline; /* Adds an underline on hover, optional */
+.hidden {
+    display: none !important;
 }

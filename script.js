@@ -1,28 +1,21 @@
 function changeContent(page) {
-    // Set the current page
     document.getElementById('current-page').innerHTML = page.charAt(0).toUpperCase() + page.slice(1);
 
-    // Remove active class from all tabs
     document.querySelectorAll('#tabs .tab').forEach(tab => {
         tab.classList.remove('active');
     });
 
-    // Add active class to the clicked tab
     event.target.classList.add('active');
 
-    // Change the content
     const content = document.getElementById('content');
     content.innerHTML = `<h1>${page.charAt(0).toUpperCase() + page.slice(1)}</h1><p>Content for ${page}.</p>`;
 }
 
 function changeView(view) {
-    // You can add logic here to show different content based on the view
-    // For example, load different sidebar content, or show/hide elements
-    console.log(view); // Placeholder action
+    console.log(view); 
 }
 
 function changeTabContent(tabName) {
-    // Update active class on tabs
     const tabs = document.querySelectorAll('#top-bar .tab');
     tabs.forEach(tab => {
         if (tab.textContent.toLowerCase() === tabName) {
@@ -32,11 +25,9 @@ function changeTabContent(tabName) {
         }
     });
 
-    // Change the main content area
     const contentArea = document.getElementById('main-content');
     contentArea.innerHTML = '<h1>' + tabName.charAt(0).toUpperCase() + tabName.slice(1) + '</h1><p>Content for ' + tabName + '.</p>';
 
-    // Update file path
     const dynamicPath = document.getElementById('dynamic-path');
     dynamicPath.textContent = tabName.charAt(0).toUpperCase() + tabName.slice(1);
 
@@ -45,12 +36,12 @@ function changeTabContent(tabName) {
         <div id="about-section" class="code-block">
         <p class="comment"># Hi, I'm Andrew Gao! - About Me</p>
         <p class="method-def"><span class="keyword">class</span> AboutAndrewGao:</p>
-        <p class="attribute">self.intro = <span class="string">Welcome! I'm Andrew Gao, a 3rd Year B.S./M.S. Computer Science Student at the Georgia Institute of Technology!
-        My undergraduate threads are Intelligence and Media, and my Masters specialization will be in Human-Computer Interaction.
+        <p class="attribute">self.intro = <span class="string">Welcome! I'm Andrew Gao, a M.S. Computer Science Student at the Georgia Institute of Technology, where I also recieved my B.S in 
+        Computer Science! My undergraduate threads at Georgia Tech were Intelligence and Media, and my Masters specialization is in Visual Analytics.
         I have held previous internship positions in Cloud Automation and Software Engineering, where I developed a wide range
-        of technical and professional skills. With an expected graduation date of Spring 2025 with my Masters, I am looking for my
-        final summer internship, with a specific interest toward Software Engineering or Artificial Intelligence positions. Take a look 
-        around - check out my resume on the left, and my experiences and contact along the top bar!
+        of technical and professional skills. With an expected graduation date of Spring 2025 with my Masters, I am looking for full time positions, 
+        with a specific interest toward Software Engineering or Artificial Intelligence positions. Take a look around - check out my resume 
+        on the left, and my experiences and contact along the top bar!
         </p>
         <p class="attribute">self.portrait = <span class="string"><img src="andrewgao.jpg" alt="Andrew Gao" class="portrait"/></span></p>
         <p class="attribute">self.extracurriculars = <span class="string">'GT Barbell, GT AASA'</span></p>
@@ -64,6 +55,14 @@ function changeTabContent(tabName) {
         contentArea.innerHTML = `
         <div id="experience-section" class="code-block">
         <p class="comment"># Work Experience</p>
+
+        <p><span class="keyword">class</span> SoftwareEngineeringIntern_KLACorporation:</p>
+        <p class="string">"""</p>
+        <p class="date-comment"># May 2024 - Aug 2024</p>
+        <p class="attribute">self.base_project = <span class="string">'Conducted comprehensive research and analysis of various solutions to enable the transition from a serial to a parallelized Kubernetes architecture for KLA’s FleetPack insight generation tools.'</span></p>
+        <p class="attribute">self.proof_of_concept = <span class="string">'Developed a comprehensive Proof of Concept utilizing Argo Workflows and Argo Events infrastructure for efficient parallel application execution.'</span></p>
+        <p class="attribute">self.final_project = <span class="string">'Implemented a custom control system utilizing the Kubernetes C# API and asynchronous programming and multithreading, enabling fully automated parallel job scheduling execution.'</span></p>
+        <p class="string">"""</p>
     
         <p><span class="keyword">class</span> SoftwareEngineeringIntern_KLACorporation:</p>
         <p class="string">"""</p>
@@ -91,8 +90,8 @@ function changeTabContent(tabName) {
         <p class="attribute">self.coursework = <span class="string">'Intro to Object Oriented Programming, Data Structures and Algorithms, 
         Design and Analysis - Algorithms, Computer Organization and Programming, Intro to Artificial Intelligence, Intro to Robotics and 
         Perception, Computer Graphics, Machine Learning, Computer Audio, Data Visualization, Automata and Complexity, Advanced 
-        Privacy Topics, Deep Learning'</span></p>
-        <p class="attribute">self.tech_skills = <span class="string">'Java, Python, C#, JavaScript, Git, Unity, Terraform, PowerShell, .NET, MudBlazor, Azure, REST API, gRPC API, NATS, Docker, PostgreSQL, Apache Spark, Apache Kafka, Apache Camel'</span></p>
+        Privacy Topics, Deep Learning, Big Data Systems and Analytics, Data and Visual Analytics, Human-Centered Data Analysis'</span></p>
+        <p class="attribute">self.tech_skills = <span class="string">'Java, Python, C#, JavaScript, Git, Unity, Terraform, PowerShell, .NET, MudBlazor, Azure, REST API, gRPC API, NATS, Docker, PostgreSQL, Apache Spark, Apache Kafka, Apache Camel, Kubernetes, Argo Workflows'</span></p>
         <p class="attribute">self.soft_skills = <span class="string">'Communication, Leadership, Adaptability, Teamwork, Problem-Solving'</span></p>
         <p class="string">"""</p>
         </div>
@@ -100,6 +99,11 @@ function changeTabContent(tabName) {
     } else if (tabName.toLowerCase() === 'projects') {
         contentArea.innerHTML = `
         <div id="project-section" class="code-block">
+
+        <p class="comment"># Publications</p>
+        <ul id="publication-list"></ul>
+
+
         <p class="comment"># Project Experience</p>
     
         <p><span class="keyword">class</span> SmartStadium_MachineLearningTeam:</p>
@@ -110,7 +114,7 @@ function changeTabContent(tabName) {
         <p class="attribute">self.data_cleaning = <span class="string">'Organized a team-wide data cleaning effort on thousands of video clips.'</span></p>
         <p class="attribute">self.hyperparameters = <span class="string">'Performed hyper-parameterization on the convolutional neural network model.'</span></p>
         <p class="attribute">self.incorrect_clips = <span class="string">'Investigated hundreds of incorrectly classified video clips to identify possible patterns, resulting in discovery of a critical error with video and play matching.'</span></p>
-        <p class="attribute">self.research_paper = <span class="string">'Co-authored and submitted research paper to the 2023 IEEE PIMRC and 2024 Sloan Sports Conference.'</span></p>
+        <p class="attribute">self.research_paper = <span class="string">'Co-authored and published research paper to the 2024 International Sports Analytics Conference and Exhibition, won Best Paper. Submission accepted to Springer Nature, awaiting publication.'</span></p>
         <p class="attribute">self.research_paper_link = <span class="project-link"><a href="https://docs.google.com/document/d/11MoRnW-M3BZFmWPLjFk5BK1pmoupe82f/edit?usp=sharing&ouid=103939176623041162479&rtpof=true&sd=true">Team Research Paper</a></span></p>
         <p class="string">"""</p>
     
@@ -126,6 +130,8 @@ function changeTabContent(tabName) {
         <p class="attribute">self.download_link = <span class="project-link"><a href="https://www.gtvgdev.com/games-archive/paravoid">Project Details</a></span></p>
         <p class="string">"""</p>
         `;
+
+        loadPublications();
         
     } else if (tabName.toLowerCase() === 'contact') {
         contentArea.innerHTML = `
@@ -156,10 +162,8 @@ function updateLineNumbers() {
     const lines = content.innerText.split('\n');
     const lineHeight = parseInt(window.getComputedStyle(content).lineHeight);
 
-    // Clear existing line numbers
     lineNumbers.innerHTML = '';
 
-    // Add new line numbers based on the number of lines in the content
     lines.forEach((_, index) => {
         const lineNumberDiv = document.createElement('div');
         lineNumberDiv.className = 'line-number';
@@ -169,13 +173,71 @@ function updateLineNumbers() {
     });
 }
 
-// Call initially to populate line numbers
+function loadPublications() {
+    fetch('publications.json')
+        .then(response => response.json())
+        .then(data => {
+            const list = document.getElementById('publication-list');
+            list.innerHTML = '';
+
+            data.forEach(pub => {
+                const listItem = document.createElement('li');
+
+                const paragraph = document.createElement('p');
+                paragraph.className = 'attribute';
+
+                const publicationText = document.createTextNode(
+                    `${pub.title} by ${pub.author} (${pub.year}) `
+                );
+
+                const link = document.createElement('a');
+                link.href = pub.link;
+                link.textContent = '(Link)';
+                link.target = '_blank';
+
+                paragraph.appendChild(publicationText);
+                paragraph.appendChild(link);
+
+                listItem.appendChild(paragraph);
+
+                list.appendChild(listItem);
+            });
+        })
+}
+
 document.addEventListener('DOMContentLoaded', updateLineNumbers);
 
-// Observe for changes in the content and update line numbers accordingly
 const observer = new MutationObserver(updateLineNumbers);
 observer.observe(document.getElementById('main-content'), {
     childList: true,
     characterData: true,
     subtree: true
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const terminalMenu = document.getElementById('terminal-menu');
+    const terminalWindow = document.getElementById('terminal-window');
+    const closeTerminal = document.getElementById('close-terminal');
+    const terminalBody = document.getElementById('terminal-body');
+
+    terminalMenu.addEventListener('click', () => {
+        terminalWindow.classList.toggle('hidden');
+        if (!terminalWindow.classList.contains('hidden')) {
+            terminalBody.focus();
+        }
+    });
+
+    closeTerminal.addEventListener('click', () => {
+        terminalWindow.classList.add('hidden');
+    });
+
+    terminalBody.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            const newLine = document.createElement('div');
+            newLine.innerHTML = '<span>$ </span>';
+            terminalBody.appendChild(newLine);
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+        }
+    });
 });

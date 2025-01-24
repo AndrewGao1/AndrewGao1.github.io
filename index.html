@@ -8,7 +8,6 @@
 </head>
 <body>
 
-    <!-- Visual Top Bar -->
     <div id="visual-top-bar">
         <div class="menu-item">File</div>
         <div class="menu-item">Edit</div>
@@ -16,7 +15,7 @@
         <div class="menu-item">View</div>
         <div class="menu-item">Go</div>
         <div class="menu-item">Run</div>
-        <div class="menu-item">Terminal</div>
+        <div class="menu-item" id="terminal-menu">Terminal</div>
         <div class="menu-item">Help</div>
         <div class="search-bar">
             <input type="text" placeholder="Search" disabled />
@@ -31,19 +30,15 @@
 
     <div id="container">
 
-    <!-- Activity Bar mimicking VS Code's activity bar -->
     <div id="activity-bar">
         <div class="activity-icon" onclick="changeView('explorer')">🗂️</div>
         <div class="activity-icon" onclick="changeView('search')">🔍</div>
         <div class="activity-icon" onclick="changeView('git')">🔃</div>
         <div class="activity-icon" onclick="changeView('debug')">🐞</div>
         <div class="activity-icon" onclick="changeView('extensions')">🧩</div>
-    <!-- Add more icons as needed -->
     </div>
-        <!-- Sidebar -->
     <div id="sidebar">
 
-        <!-- Sidebar header -->
         <div class="sidebar-header">
             EXPLORER
         </div>
@@ -64,14 +59,12 @@
         </div>
     </div>
 
-        <!-- Main content area -->
     <div id="content-area">
         
-        <!-- Top bar for the path -->
         <div id="top-bar">
-            <div class="tab" onclick="changeTabContent('about')"">About</div>
+            <div class="tab" onclick="changeTabContent('about')">About</div>
             <div class="tab" onclick="changeTabContent('experience')">Experience</div>
-            <div class="tab" onclick="changeTabContent('projects')">Projects</div>
+            <div class="tab" onclick="changeTabContent('projects')">Projects & Publications</div>
             <div class="tab" onclick="changeTabContent('contact')">Contact</div>
         </div>
 
@@ -79,7 +72,6 @@
             andrewjgao.html > html > body > <span id="dynamic-path">About</span>
         </div>
         <div id="line-content">
-            <!-- Content area that changes when different tabs are clicked -->
             <div id="line-numbers" contenteditable="false" oninput="updateLineNumbers()"></div>
             <div id="main-content" contenteditable="false" oninput="updateLineNumbers()">
                 <div style="height: 2000px;"></div>
@@ -90,17 +82,42 @@
 </div>
 
 <div id="bottom-bar">
-    <!-- Left corner with blue background -->
+    
     <div id="bottom-bar-status">
-        <span class="status-indicator">✔</span> <!-- Replace with an actual checkmark icon -->
+        <span class="status-indicator">✔</span> 
     </div>
     
-    <!-- Main area of the bottom bar with error and warning icons -->
     <div id="bottom-bar-main">
-        <span class="error-icon">⚠ 0</span> <!-- Replace with an actual error icon -->
-        <span class="warning-icon">✖ 0</span> <!-- Replace with an actual warning icon -->
-        <span class="spacer"></span> <!-- Spacer to push items to the right -->
+        <span class="error-icon">⚠ 0</span>
+        <span class="warning-icon">✖ 0</span>
+        <span class="spacer"></span> 
         <span>Ln 45, Col 20</span>
+    </div>
+</div>
+
+<div id="terminal-window" class="hidden">
+    <div id="terminal-header">
+        <span>Terminal</span>
+        <svg
+        id="close-terminal"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="16"
+        height="16"
+        role="button"
+        style="cursor: pointer; fill: #ffffff;"
+    >
+        <path
+            d="M18 6L6 18M6 6l12 12"
+            stroke="#ff5f57"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        />
+    </svg>
+    </div>
+    <div id="terminal-body" contenteditable="true">
+        <span>$ </span>
     </div>
 </div>
 
